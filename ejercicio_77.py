@@ -1,7 +1,7 @@
 #ejercicio_73.py
 def login(username, password, attempts):
     if username == "user1" and password == "password123":
-        return True
+        return True, None
     else:
         attempts += 1
         return False, attempts
@@ -10,9 +10,9 @@ attempts = 0
 while attempts < 3:
     user = input("Enter username: ")
     passwd = input("Enter password: ")
-    
+
     success, attempts = login(user, passwd, attempts)
-    
+
     if success:
         print("Login successful!")
         break
